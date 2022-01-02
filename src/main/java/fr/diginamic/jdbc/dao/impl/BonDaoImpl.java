@@ -62,8 +62,8 @@ public class BonDaoImpl implements BonDao {
 
 	public void insert(Bon bon) throws SQLException {
 		/** REQUETE SQL */
-		String sql = "INSERT INTO BON (ID, NUMERO, DATE_CMDE, DELAI, ID_FOU) VALUES ('" + bon.getId() + " " + bon.getNumero()
-				+ " " + bon.getDateCmd() + " " + bon.getDelai() + " " + bon.getId_fou() + "')";
+		String sql = "INSERT INTO BON (ID, NUMERO, DATE_CMDE, DELAI, ID_FOU) VALUES (" + bon.getNum()
+				+ " " + bon.getToday() + " " + bon.getDelais() + " " + bon.getId_fou2() + ")";
 		try {
 			this.stm = this.con.createStatement();
 			this.stm.executeUpdate(sql);

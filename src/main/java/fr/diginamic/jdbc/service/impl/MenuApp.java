@@ -183,8 +183,8 @@ public class MenuApp {
 				
 			case "5": /** AFFICHAGE d'un seul article */
 				
-				System.out.println("ID de l'article a afficher : ");
-				int afficherart = Scan.ScanLauchInt();
+				System.out.println("Designation de l'article a afficher : ");
+				String afficherart = Scan.ScanLauchOne();
 				Article a = MenuExtractOne.menuextractoneart(afficherart);
 				System.out.println(a);
 				MenuApp.DisplayMenu();
@@ -219,21 +219,21 @@ public class MenuApp {
 			
 			case "1": /** INSERTION d'un nouveau bon */
 				
-				DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+				// PROBLEME D'INSERTION DU BON (DATE ??)
+				DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 				LocalDateTime today = LocalDateTime.now();
 				
-				System.out.println("ID : ");
-				int id = Scan.ScanLauchInt();
+				
 				System.out.println(today);
 				System.out.println("NUMERO : ");
 				int num = Scan.ScanLauchInt();
-				//DATE DU JOUR A TERMINER !!!!! PROBLEME DE COMPTE DE COLONNES
+				
 				System.out.println("DELAIS : ");
 				int delais = Scan.ScanLauchInt();
 				System.out.println("ID FOURNISSEUR : ");
 				int id_fou = Scan.ScanLauchInt();
 				
-				MenuInsert.menuInsertBon(id,num, today , delais , id_fou);
+				MenuInsert.menuInsertBon(num, today , delais , id_fou);
 				System.out.println("Le nouveau bon a bien été créé !");	
 				
 				MenuApp.DisplayMenu();
@@ -291,13 +291,8 @@ public class MenuApp {
 			
 			
 			
-			/** CREATION D'UN LIEN PROMO */
-			
-			System.out.println("ID de l'article a afficher : ");
-			int afficherart = Scan.ScanLauchInt();
-			Article a = MenuExtractOne.menuextractoneart(afficherart);
-			System.out.println(a);
-			MenuApp.DisplayMenu();
+			/** CREATION D'UN LIEN PROMO 
+			*/
 			
 			
 			

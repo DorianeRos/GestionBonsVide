@@ -27,7 +27,10 @@ public class MenuExtractOne {
 				}
 		return null;
 		}
-	public static Article menuextractoneart(int afficherart) {
+	
+	
+	
+	public static Article menuextractoneart(String afficherart) {
 		
 		 try{
 				ArticleDaoImpl a = new ArticleDaoImpl();
@@ -38,6 +41,9 @@ public class MenuExtractOne {
 				}
 		return null;
 		}
+	
+	
+	
 	
 	public static Bon menuextractoneBon(int afficherbon) {
 		

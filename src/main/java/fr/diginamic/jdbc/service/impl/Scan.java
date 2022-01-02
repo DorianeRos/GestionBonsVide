@@ -38,6 +38,8 @@ public class Scan {
 		return nombre;		
 	}
 	
+
+	
 	public static int ScanLauchInt() {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);

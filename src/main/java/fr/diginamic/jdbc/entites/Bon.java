@@ -41,6 +41,36 @@ public Bon(int id2, int num, LocalDateTime today, int delais, int id_fou2) {
 public int getId() {
 	return id;
 }
+public int getId2() {
+	return id2;
+}
+public void setId2(int id2) {
+	this.id2 = id2;
+}
+public int getNum() {
+	return num;
+}
+public void setNum(int num) {
+	this.num = num;
+}
+public LocalDateTime getToday() {
+	return today;
+}
+public void setToday(LocalDateTime today) {
+	this.today = today;
+}
+public int getDelais() {
+	return delais;
+}
+public void setDelais(int delais) {
+	this.delais = delais;
+}
+public int getId_fou2() {
+	return id_fou2;
+}
+public void setId_fou2(int id_fou2) {
+	this.id_fou2 = id_fou2;
+}
 public void setId(int id) {
 	this.id = id;
 }

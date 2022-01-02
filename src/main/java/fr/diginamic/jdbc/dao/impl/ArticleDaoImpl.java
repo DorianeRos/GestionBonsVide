@@ -109,9 +109,9 @@ public ArticleDaoImpl() throws SQLException {
 	}
 
 	@Override
-	public Article extraireOne(Integer id) throws SQLException {
+	public Article extraireOne(String designation) throws SQLException {
 		/** REQUETE SQL */
-		String sql = "SELECT ID, REF, DESIGNATION, PRIX, ID_FOU FROM ARTICLE WHERE ID=" + id;
+		String sql = "SELECT ID, REF, DESIGNATION, PRIX, ID_FOU FROM ARTICLE WHERE ID =(' " + designation + "')";
 		ResultSet rs= null;
 		try {
 			this.stm = this.con.createStatement();
@@ -120,7 +120,7 @@ public ArticleDaoImpl() throws SQLException {
 
 			if (rs.next()) {
 				
-				return new Article(rs.getInt("ID"), rs.getString("REF"), rs.getString("DESIGNATION"),rs.getDouble("PRIX"), rs.getInt("ID_FOU")); // obj de type fournisseur
+				return new Article(rs.getInt("ID"), rs.getString("REF"), rs.getString("DESIGNATION"),rs.getDouble("PRIX"), rs.getInt("ID_FOU"));
 
 			}
 			return null; // retourne la liste

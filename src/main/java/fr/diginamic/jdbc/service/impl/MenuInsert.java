@@ -45,11 +45,11 @@ public class MenuInsert extends MenuApp {
 	 * 
 	 * INSERTION D'UN BON (problème avec la date)
 	 */
-	public static void menuInsertBon(int id, int num, LocalDateTime today , int delais , int id_fou) throws SQLException {
+	public static void menuInsertBon( int num, LocalDateTime today , int delais , int id_fou) throws SQLException {
 
 
 		BonDaoImpl b = new BonDaoImpl();
-		b.insert(new Bon(id, num, today, delais, id_fou));
+		b.insert(new Bon(0, num, today, delais, id_fou));
 
 }
 	
